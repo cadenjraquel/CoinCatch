@@ -24,11 +24,7 @@ int* coinCheck(int target, int* count) {
     ret_counts[i] = std::min(target / coins[i], count[i]);
     target -= ret_counts[i] * coins[i];
   }
-  if (target == 0) {
-    return ret_counts;
-  } else {
-    return NULL;
-  }
+  return target == 0 ? ret_counts : NULL;
 }
 
 int main() {
